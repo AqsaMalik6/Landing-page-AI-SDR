@@ -117,10 +117,4 @@ Edit `app/layout.tsx` to update meta tags, titles, and descriptions.
 - `npm start` - Start production server
 - `npm run lint` - Run ESLint
 
-## License
 
-© 2026 FISTA Solutions. All rights reserved.
-
-##  Support
-
-For support, contact FISTA Solutions team or raise an issue in the repository.
