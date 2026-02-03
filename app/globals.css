@@ -9,6 +9,17 @@
   --primary-glow: rgba(59, 130, 246, 0.5);
   --secondary: #6366f1;
   --accent: #8b5cf6;
+  --auth-card-bg: rgba(255, 255, 255, 0.05);
+  --auth-card-border: rgba(255, 255, 255, 0.1);
+  --auth-input-bg: rgba(255, 255, 255, 0.05);
+  --auth-input-border: rgba(255, 255, 255, 0.1);
+  --pricing-card-bg: rgba(255, 255, 255, 0.03);
+  --pricing-card-hover: rgba(255, 255, 255, 0.07);
+  --pricing-border: rgba(255, 255, 255, 0.1);
+  --pricing-accent: #3b82f6;
+  --pricing-card-highlight: #4f46e5;
+  --onboarding-btn-gradient: linear-gradient(90deg, #a855f7 0%, #3b82f6 100%);
+  --onboarding-card-bg: rgba(79, 70, 229, 0.1);
 }
 
 body {
@@ -82,5 +93,86 @@ body {
     50% {
       transform: translateY(-20px);
     }
+  }
+
+  .auth-card {
+    background: var(--auth-card-bg);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid var(--auth-card-border);
+    border-radius: 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 440px;
+  }
+
+  .auth-input {
+    background: var(--auth-input-bg);
+    border: 1px solid var(--auth-input-border);
+    color: white;
+    transition: all 0.2s ease;
+  }
+
+  .auth-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+    outline: none;
+  }
+
+  .pricing-card {
+    background: var(--pricing-card-bg);
+    border: 1px solid var(--pricing-border);
+    border-radius: 2.5rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .pricing-card:hover {
+    background: var(--pricing-card-hover);
+    border-color: var(--pricing-accent);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -12px rgba(59, 130, 246, 0.2);
+  }
+
+  .floating-icon {
+    animation: floating-icon 4s ease-in-out infinite;
+  }
+
+  @keyframes floating-icon {
+
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+
+    33% {
+      transform: translate(10px, -15px) rotate(5deg);
+    }
+
+    66% {
+      transform: translate(-10px, 10px) rotate(-5deg);
+    }
+  }
+
+  .pricing-gradient-text {
+    background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.7) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .onboarding-step-line {
+    background: repeating-linear-gradient(to right, rgba(255, 255, 255, 0.1) 0, rgba(255, 255, 255, 0.1) 5px, transparent 5px, transparent 10px);
+  }
+
+  .faq-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .faq-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
   }
 }

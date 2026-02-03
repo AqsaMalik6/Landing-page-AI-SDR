@@ -1,14 +1,15 @@
 'use client';
 
 import { Sparkles, Twitter, Linkedin, Github, Mail } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Footer() {
   const footerLinks = {
     Product: [
-      { name: 'Features', href: '#features' },
-      { name: 'Solutions', href: '#benefits' },
-      { name: 'Our Technology', href: '#technology' },
-      { name: 'Pricing', href: '#pricing' },
+      { name: 'Features', href: '/#features' },
+      { name: 'Solutions', href: '/#benefits' },
+      { name: 'Our Technology', href: '/#technology' },
+      { name: 'Pricing', href: '/pricing' },
       { name: 'Integrations', href: '#' },
     ],
     Company: [
@@ -64,12 +65,12 @@ export default function Footer() {
               <ul className="space-y-4">
                 {links.map((link) => (
                   <li key={link.name}>
-                    <a
+                    <Link
                       href={link.href}
                       className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

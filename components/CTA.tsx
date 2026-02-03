@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Rocket } from 'lucide-react';
+import Link from 'next/link';
 
 export default function CTA() {
   return (
@@ -47,10 +48,10 @@ export default function CTA() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
-              <button className="group px-10 py-5 bg-white text-blue-600 rounded-full font-bold text-xl hover:bg-blue-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 flex items-center gap-2">
+              <Link href="/signup" className="group px-10 py-5 bg-white text-blue-600 rounded-full font-bold text-xl hover:bg-blue-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 flex items-center gap-2">
                 Get Started for Free
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </Link>
               <button className="px-10 py-5 bg-transparent text-white rounded-full font-bold text-xl hover:bg-white/10 transition-all duration-300 border-2 border-white/30 backdrop-blur-sm">
                 Book a Strategy Call
               </button>
